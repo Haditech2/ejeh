@@ -1,3 +1,5 @@
+# Force local static files storage for Vercel
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 """
 Django settings for Ejeh Ankpa Palace Platform.
 Production-ready configuration for traditional institution website.
