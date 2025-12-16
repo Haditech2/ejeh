@@ -85,6 +85,14 @@ if DATABASE_URL:
             conn_health_checks=True,
         )
     }
+elif os.environ.get('VERCEL'):
+    # Dummy database for Vercel build phase (collectstatic)
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'dummy',
+        }
+    }
 else:
     DATABASES = {
         'default': {
